@@ -1,0 +1,178 @@
+# Here you can edit all chat messages
+# GUI items and menus can be found in <language>_gui.yml
+# 
+# If you encounter any issues or have questions, contact plugin support.
+# Plugin page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# 
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+# 
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+# 
+# For example we want to print a message as a title:
+# Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
+# 
+# You also send a message at the actionbar:
+# Set message to: '#a#This is a actionbar message.'
+# (Set #a# in front of it.)
+# 
+# More information: https://github.com/Angeschossen/General/wiki/Messages
+
+
+
+general:
+  prefix:
+    normal: '&8[&9高级漏斗&8] '
+    help: '&8[&9高级漏斗&8] &7用法 > '
+  time:
+    seconds: 秒
+    minutes: 分
+    hours: 时
+  teleportation:
+    bossbar: '&7请等候&5 {time} &7秒后进行传送'
+help:
+  help:
+    root:
+      header: '[NoPrefix][T]&7&l&m━━&e&l<<<<&7&l&m━[H]&7点击查看上一页
+        [/H][C]{cmd} {previous}[/C][/T] &9高级漏斗--指令
+        &7页数&3 {page} &8/&3 {pages} [T]&7&l&m━&e&l>>>>&7&l&m━━[H]&7点击查看下一页
+        [/H][C]{cmd} {next}[/C][/T]'
+      footer: |
+        [NoPrefix]
+        &7点击下面箭头打开向导
+        [T]&7&l&m━━&e&l<<<<&7&l&m━[H]&7点击查看上一页
+        [/H][C]{cmd} {previous}[/C][/T] &9高级漏斗--指令&7页数&3 {page} &8/&3 {pages} 
+        [T]&7&l&m━&e&l>>>>&7&l&m━━[H]&7点击查看下一页[/H][C]{cmd} {next}[/C][/T]
+    sub:
+      unknown: |
+        &c此指令→ &4 {command} &c未找到
+          [T]&7✖ 查看指令 >&3/{cmd} &8[CLICK][H]&7点此获取帮助[/H][C]{cmd}[/C][/T]
+      header: '[NoPrefix][T]&7&l&m━━━━━&e&l<<<<&7&l&m━[H]&7点击查看上一页
+        [/H][C]{cmd} {previous}[/C][/T] &9指令列表&7页数&3
+        {page} &8/&3 {pages} [T]&7&l&m━&e&l>>>>&7&l&m━━━━━[H]&7点击查看下一页
+        [/H][C]{cmd} {next}[/C][/T]'
+      footer: |
+        [NoPrefix]
+        &7点击下面箭头打开向导
+        [T]&7&l&m━━━━━&e&l<<<<&7&l&m━[H]&7点击查看上一页
+        [/H][C]{cmd} {previous}[/C][/T] &9指令列表&7页数&3 {page} &8/&3 {pages} 
+        [T]&7&l&m━&e&l>>>>&7&l&m━━━━━[H]&7点击查看下一页
+        [/H][C]{cmd} {next}[/C][/T]
+  command:
+    upgradeablehoppers:
+      help: '[T]&e{parent} {subcmd} {args} &8- &7指令列表[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+      get: '[T]&e{parent} {subcmd} {args} &8 - &7获取漏斗[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+      give: '[T]&e{parent} {subcmd} {args} &8 - &7获取漏斗[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+      list: '[T]&e{parent} {subcmd} &8- &7查看你的漏斗[H]&7点击执行[/H][C]{fullcmd}[/C][/T]'
+      admin:
+        main: '[T]&e{parent} {subcmd} {args} &8- &7管理员指令[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+        reload: '[T]&e{parent} {subcmd} &8- &7重载配置&d&n简体中文汉化By hny3494317690[H]&7点击执行[/H][C]{fullcmd}[/C][/T]'
+        import: '[T]&e{parent} {subcmd} {args} &8- &7从第三方载入漏斗[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+        migratedb: '[T]&e{parent} {subcmd} {args} &8- &7迁移数据表[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+        about: '[T]&e{parent} {subcmd} &8- &7调试信息[H]&7点击执行[/H][C]{fullcmd}[/C][/T]'
+        give: '[T]&e{parent} {subcmd} {args} &8- &7给予漏斗[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+        listperms: '[T]&e{parent} {subcmd} {args} &8- &7列出可用许可[H]&7点击复制[/H][SC]{fullcmd}[/SC][/T]'
+upgradeablehoppers:
+  message:
+    hopper:
+      created: '#t#{type}{newline}&7放置成功'
+      deleted: '#t#{type}{newline}&c拆卸成功'
+      link:
+        click: '&7左击一个容器以连接此漏斗'
+        inventory: '&c连接失败,此方块不是容器'
+        type: '&c此类容器无法被连接&8 它是 >{type}'
+        origin: '&c连接失败,禁止原地tp&7 请连接至其他容器'
+        world: '&c连接失败,不能跨世界连接&7 容器需与漏斗在同一世界'
+        max-distance: '&c连接失败,距离过远&7 此漏斗最大连接距离为 >
+        &3 {distance}&7 请在漏斗界面升级最大连接距离'
+        already: '&c连接失败,此容器已被连接&7 可打开漏斗界面查看连接了哪些容器'
+        max: '&c连接失败,容器数达上限&7 你已经创建了&3 {max} &7个连接&7 请在漏斗界面升级最大连接容器数'
+        untrusted: '&c连接失败,该容器已被他人宣称所有,你并没有被设置信任'
+        success: '#t#&9&l漏斗{newline}&7成功连接'
+      unlink:
+        click: '&7请左击容器以断开与此漏斗的连接'
+        not-linked: '&c此容器未被连接&7 原有配置将不会改变'
+        success: '#t#&9&l容器{newline}&7成功断开连接'
+    no-access:
+      upgrade: '&c你无法升级该漏斗 &7它是&3 {owner}&7的'
+      open: '&c你无法打开漏斗该物品栏 &7它是&3
+        {owner}&7的'
+      delete: '&c你无法删除该漏斗 &7它是&3 {owner}&7的'
+      link: '&c你无法创造漏斗连接 &7它是&3
+        {owner}&7的'
+      vanilla:
+        craft: '&c你无法合成普通漏斗 &7合成配方已由管理员禁用 &7请使用指令
+          &8/&aHopper get &7来购买漏斗 强制合成需要权限 > uhoppers.bypass.vanilla.craft'
+        place: '&c你无法放置普通漏斗 &7此功能已由管理员禁用 &7请使用指令
+          &8/&aHopper get &7购买漏斗 强制放置需要指令 > uhoppers.bypass.vanilla.place'
+    creation:
+      world: '&c你无法在此世界创造高级漏斗漏斗 &7请联系管理员添加 >&3 {world} &7< 到配置目录 > worlds_list'
+      owner: '&c你无法放置漏斗 &7它是&3 {owner}&7的
+        &8请修改参数 > only-owner'
+      max: '&c你无法再创建更多高级漏斗 &7最大放置数是&3
+        {max}&7 &8需要修改权限 > uhoppers.hoppers.<数量>'
+      only-claim: '&c你无法在此放置漏斗 &7请在自己的宣称内放置'
+      convert-perm: '&c无法将此漏斗转为高级漏斗 &7最大放置数是&3 {max}&7  &8需要修改权限 > uhoppers.hoppers.<数量>'
+    teleportation:
+      already: '&c你不能发起第二个传送请求 已创建一个请求 &7请等待传送完成'
+      started: '&7传送请求收到! 传送将在&5 {sec} &7秒后开始
+        请不要移动'
+      cancelled: '&c传送请求已被取消 &7请不要移动 并等待&5 {sec} &7秒进行传送'
+      plugin: '&c传送被第三方插件禁止 &7检查插件兼容性 &7这并非是高级漏斗插件的问题'
+      unsafe: '&c传送请求已被取消 目的地不安全'
+      corrected: '&7传送目的地不安全 &7你将被传送到附近安全地带'
+      cmd: '&c传送时不能使用指令 &7请等待&5
+        {sec} 秒 &7直到传送完成'
+    chat-input:
+      player: '#t#&6在聊天栏输入一个名称[newline]&7 [newline]&7键入
+        "cancel" 取消操作'
+      rename: '#t#&6在聊天栏输入一个名称[newline]&7 [newline]&7键入
+        "cancel" 取消操作'
+      name: '#t#&6在聊天栏输入一个名称[newline]&7 [newline]&7键入 "cancel" 取消操作'
+  command:
+    general:
+      no-permission: '&c你不能这样做 &8你需要
+        {permission}的许可'
+      cant-afford: '&c没钱啦 &7需要&3 {cost} &7元来购买'
+      player-offline: '&c无法找到该玩家 &7玩家&3 {player} &7处于离线状态'
+      invalid-number: '&c你输入了无效数字&e {argument} &c参数 &7请重试'
+      name:
+        number: '&c你无法使用数字来命名 &7请使用纯字母 出现数字 >&3 {invalid}'
+        character: '&c你无法使用无效字符来命名 &7请使用数字与字母组合 &7出现无效字符 >&3 {invalid}'
+        color: '&c请不要在此使用颜色代号 &7请在输入中去除颜色代号'
+        length: '&c名字太长啦 &7最多&3 {max} &7个字符 &8(&7你的 >
+          {input}&8)&7  &8这里包含了颜色代号'
+        empty: '&c无效命名 &7除了颜色代号,起码得输入一个字符吧'
+      input:
+        confirm: |
+          &7确认行为 > &8(&e/{input}&8) &7点击
+            [T]&2✔ 以确认 &8[CLICK][H]&7点击这里以确认行为[/H][C]{fullcmd}[/C][/T]
+        number: '&c你的输入&4 {input} &c不是一个数字 &7这里报错 > {pos}: {expected}'
+        player: '&c没有一个玩家叫&4 {player}&c  &7检查书写'
+        offline: '&c现在没有叫&4 {player} &c的玩家在线
+          &7检查书写'
+        world: '&c世界&4 {input} &c不再可用 &7这里报错 > {pos}: {expected}'
+        world-disabled: '&c该世界已被停用 &8世界 {input}'
+    get:
+      type: '&c找不到 >&4 {input} &c种类的漏斗 &7参数错误 > {types}'
+      max: '&c你不能购买超过&4 {amount} &c个漏斗 &7你最多能买&3
+        {max} &7个漏斗 &8许可参数uhoppers.hoppers.<number>'
+      permission: '&c你被禁止使用 {type}漏斗 [V]&8许可参数
+        {permission}[/V]'
+      confirm: |
+        &c请确认交易 &7此次交易将收取&c {costs}&7元
+          [T]&2✔ 确认 &8[&7CLICK&8][H]&7点此确认交易[/H][C]{fullcmd}[/C][/T]
+      dropped: '&7你收到了&3 {amount} &7个漏斗 花费&c {cost}&7元 &c由于物品栏空间已满,漏斗将作为掉落物放置于地面'
+      success: '&7你收到了&3 {amount} &7个漏斗 花费&c {cost}&7元 这些漏斗已被送入你的物品栏'
+    give:
+      success-sender: '&7你成功给予了&3 {items} &7个漏斗给&3 {player}&7'
+      success-target: '&7你收到了&3 {items} &7个漏斗 这些漏斗已被送入你的物品栏'
+      dropped: '&7你收到了&3 {items} &7个漏斗 &c由于物品栏空间已满,漏斗将作为掉落物放置于地面'
+    list:
+      retrieving: '&7正在玩家 {player} 附近检索漏斗...'
